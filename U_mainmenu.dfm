@@ -1,6 +1,6 @@
 object form1: Tform1
-  Left = 306
-  Top = 189
+  Left = 296
+  Top = 191
   Width = 928
   Height = 480
   Caption = 'Main Menu UTS Visual2'
