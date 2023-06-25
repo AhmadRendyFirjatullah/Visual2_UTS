@@ -1,6 +1,6 @@
 object form1: Tform1
-  Left = 269
-  Top = 170
+  Left = 306
+  Top = 189
   Width = 928
   Height = 480
   Caption = 'Main Menu UTS Visual2'
@@ -47,34 +47,44 @@ object form1: Tform1
       Caption = 'Latihan'
       object LatihanKalkulator1: TMenuItem
         Caption = 'Latihan Kalkulator'
+        OnClick = LatihanKalkulator1Click
       end
       object PraktekMandiriKalkulator1: TMenuItem
         Caption = 'Praktek Mandiri Kalkulator'
+        OnClick = PraktekMandiriKalkulator1Click
       end
       object LatihanKondisional1: TMenuItem
         Caption = 'Latihan Kondisional'
+        OnClick = LatihanKondisional1Click
       end
       object PraktekMandiriKondisional1: TMenuItem
         Caption = 'Praktek Mandiri Kondisional'
+        OnClick = PraktekMandiriKondisional1Click
       end
       object LatihanGrafikdanStringGrid1: TMenuItem
         Caption = 'Latihan Grafik dan StringGrid'
+        OnClick = LatihanGrafikdanStringGrid1Click
       end
       object PraktekMandiriGrafikdanStringGrid1: TMenuItem
         Caption = 'Praktek Mandiri Grafik dan StringGrid'
+        OnClick = PraktekMandiriGrafikdanStringGrid1Click
       end
       object PraktekMandiriGrafikdanStringGridUpdate1: TMenuItem
         Caption = 'Praktek Mandiri Grafik dan StringGrid Update'
+        OnClick = PraktekMandiriGrafikdanStringGridUpdate1Click
       end
       object LatihanDatabase1: TMenuItem
         Caption = 'Latihan Database'
+        OnClick = LatihanDatabase1Click
       end
     end
     object ProfilePembuat1: TMenuItem
       Caption = 'Profile Pembuat'
+      OnClick = ProfilePembuat1Click
     end
     object Close1: TMenuItem
       Caption = 'Close'
+      OnClick = Close1Click
     end
   end
   object Timer1: TTimer
