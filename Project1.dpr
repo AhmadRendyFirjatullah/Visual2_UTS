@@ -11,7 +11,8 @@ uses
   U_praktekgrafikdanstringgrid in 'U_praktekgrafikdanstringgrid.pas' {Form7},
   U_praktekgrafikdanstringgridupdate in 'U_praktekgrafikdanstringgridupdate.pas' {Form8},
   U_latihandatabase in 'U_latihandatabase.pas' {Form9},
-  U_profile in 'U_profile.pas' {Form10};
+  U_profile in 'U_profile.pas' {Form10},
+  U_tambahdatajadwal in 'U_tambahdatajadwal.pas' {Form11};
 
 {$R *.res}
 
@@ -27,5 +28,6 @@ begin
   Application.CreateForm(TForm8, Form8);
   Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TForm10, Form10);
+  Application.CreateForm(TForm11, Form11);
   Application.Run;
 end.

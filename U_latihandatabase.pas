@@ -30,6 +30,7 @@ type
     procedure BitBtn2Click(Sender: TObject);
     procedure frxjadwalClickObject(view: TfrxView; Button: TMouseButton;
       Shift: TShiftState; var Modified: Boolean);
+    procedure BitBtn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,6 +41,7 @@ var
   Form9: TForm9;
 
 implementation
+uses U_tambahdatajadwal;
 
 {$R *.dfm}
 
@@ -103,6 +105,11 @@ begin
 
    frxdetailjadwal.ShowReport();
  end;
+end;
+
+procedure TForm9.BitBtn4Click(Sender: TObject);
+begin
+Form11.ShowModal;
 end;
 
 end.

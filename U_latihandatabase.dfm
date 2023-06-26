@@ -1,8 +1,8 @@
 object Form9: TForm9
-  Left = 229
-  Top = 65
-  Width = 1043
-  Height = 671
+  Left = 185
+  Top = 83
+  Width = 1047
+  Height = 628
   Caption = 'Latihan Database'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,8 +15,8 @@ object Form9: TForm9
   PixelsPerInch = 96
   TextHeight = 13
   object cht1: TChart
-    Left = 8
-    Top = 344
+    Left = 16
+    Top = 312
     Width = 1001
     Height = 266
     BackWall.Brush.Color = clWhite
@@ -39,8 +39,8 @@ object Form9: TForm9
     end
   end
   object BitBtn1: TBitBtn
-    Left = 832
-    Top = 32
+    Left = 840
+    Top = 8
     Width = 177
     Height = 41
     Caption = 'TAMPILKAN GRAFIK'
@@ -54,9 +54,9 @@ object Form9: TForm9
     OnClick = BitBtn1Click
   end
   object BitBtn2: TBitBtn
-    Left = 712
-    Top = 32
-    Width = 97
+    Left = 752
+    Top = 8
+    Width = 81
     Height = 41
     Caption = 'PRINT'
     Font.Charset = ANSI_CHARSET
@@ -69,9 +69,9 @@ object Form9: TForm9
     OnClick = BitBtn2Click
   end
   object BitBtn3: TBitBtn
-    Left = 552
-    Top = 32
-    Width = 139
+    Left = 632
+    Top = 8
+    Width = 115
     Height = 41
     Caption = 'LOAD DATA'
     Font.Charset = ANSI_CHARSET
@@ -84,9 +84,9 @@ object Form9: TForm9
     OnClick = BitBtn3Click
   end
   object BitBtn4: TBitBtn
-    Left = 320
-    Top = 32
-    Width = 211
+    Left = 456
+    Top = 8
+    Width = 171
     Height = 41
     Caption = 'TAMBAH DATA BARU'
     Font.Charset = ANSI_CHARSET
@@ -96,10 +96,11 @@ object Form9: TForm9
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+    OnClick = BitBtn4Click
   end
   object dbgrd1: TDBGrid
-    Left = 8
-    Top = 88
+    Left = 16
+    Top = 56
     Width = 1001
     Height = 241
     DataSource = ds1
@@ -141,7 +142,7 @@ object Form9: TForm9
     CloseDataSource = False
     DataSet = qry1
     Left = 816
-    Top = 96
+    Top = 80
   end
   object frxjadwal: TfrxReport
     Version = '4.0.11'
@@ -160,7 +161,7 @@ object Form9: TForm9
       'end.')
     OnClickObject = frxjadwalClickObject
     Left = 816
-    Top = 152
+    Top = 136
     Datasets = <
       item
         DataSet = frxDBjadwal
@@ -479,7 +480,7 @@ object Form9: TForm9
       ''
       'end.')
     Left = 896
-    Top = 152
+    Top = 136
     Datasets = <
       item
         DataSet = frxDBdetailjadwal
@@ -885,7 +886,7 @@ object Form9: TForm9
     CloseDataSource = False
     DataSet = qry2
     Left = 896
-    Top = 96
+    Top = 80
   end
   object qry2: TADOQuery
     Connection = con1
@@ -893,7 +894,7 @@ object Form9: TForm9
     Parameters = <>
     SQL.Strings = (
       'select* from jadwal_table')
-    Left = 960
-    Top = 96
+    Left = 968
+    Top = 80
   end
 end
