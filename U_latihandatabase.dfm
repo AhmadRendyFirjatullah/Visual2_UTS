@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 185
-  Top = 83
+  Left = 199
+  Top = 82
   Width = 1047
   Height = 628
   Caption = 'Latihan Database'
