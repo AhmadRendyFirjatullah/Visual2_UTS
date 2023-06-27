@@ -1,8 +1,8 @@
 object Form11: TForm11
-  Left = 133
+  Left = 134
   Top = 78
   Width = 1202
-  Height = 623
+  Height = 626
   Caption = 'Tambah Data'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,7 @@ object Form11: TForm11
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
@@ -180,6 +181,7 @@ object Form11: TForm11
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 9
+      OnClick = Button2Click
     end
     object Button3: TButton
       Left = 912
@@ -222,5 +224,6 @@ object Form11: TForm11
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = DBGrid1CellClick
   end
 end

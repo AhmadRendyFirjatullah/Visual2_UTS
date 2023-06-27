@@ -31,6 +31,9 @@ type
     Button3: TButton;
     Button4: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
+    procedure FormShow(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,7 +42,7 @@ type
 
 var
   Form11: TForm11;
-
+  upd:string;
 implementation
 uses U_latihandatabase;
 {$R *.dfm}
@@ -60,4 +63,67 @@ begin
   ShowMessage('DATA BERHASIL DI SIMPAN');
 end;
  end;
+procedure TForm11.DBGrid1CellClick(Column: TColumn);
+begin
+try
+upd:=form9.qry1.Fields[0].AsString;
+Edit1.Text:= form9.qry1.Fields[1].AsString;
+Edit2.Text:= form9.qry1.Fields[2].AsString;
+ComboBox1.Text:= form9.qry1.Fields[3].AsString;
+DateTimePicker1.date:= form9.qry1.Fields[4].AsDateTime;
+Edit3.Text:= form9.qry1.Fields[5].AsString;
+Edit4.Text:= form9.qry1.Fields[6].AsString;
+Edit5.Text:= form9.qry1.Fields[7].AsString;
+Edit6.Text:= form9.qry1.Fields[8].AsString;
+except
+  // Kosong
+end;
+end;
+
+procedure TForm11.FormShow(Sender: TObject);
+begin
+Form9.qry1.SQL.Clear;
+form9.qry1.SQL.Add('select * from jadwal_table');
+form9.qry1.open;
+end;
+
+procedure TForm11.Button2Click(Sender: TObject);
+begin
+if (Edit1.Text='')or (Edit1.Text='00:00:00')or (Edit2.Text='')or (Edit2.Text='00:00:00') then
+begin
+  ShowMessage('DATA BELUM DIISI DENGAN BENAR');
+end else
+if (ComboBox1.Text='')or (ComboBox1.Text='---PILIH HARI---')then
+begin
+  ShowMessage('HARI BELUM DIISI DENGAN BENAR');
+end else
+if (Edit3.Text='')or (Edit3.Text='-')or (Edit4.Text='')or (Edit4.Text='-')then
+begin
+  ShowMessage('Inputan Ruangan dan Matakuliah masih belum sesuai');
+end else
+if (Edit5.Text='')or (Edit5.Text='-')or (Edit6.Text='')or (Edit6.Text='0')then
+begin
+  ShowMessage('Inputan Kelas atau Total Hadir Masih Belum sesuai');
+end else
+if (Edit1.Text= Form9.qry1.Fields[1].AsString) and (ComboBox1.Text= Form9.qry1.Fields[3].AsString) then
+begin
+  ShowMessage('Data Tidak Ada Perubahan');
+end else
+begin
+  //Kode Update
+  with Form9.qry1 do
+  begin
+    SQL.Clear;
+    SQL.Add('update jadwal_table set jam_mulai="'+Edit1.Text+'",jam_akhir="'+Edit2.Text+'" where no="'+upd+'"');
+    ExecSQL;
+
+    SQL.Clear;
+    SQL.Add('select * from jadwal_table');
+    Open;
+    ShowMessage('DATA BERHASIL DI UPDATE');
+    
+  end;
+end
+end;
+
 end.
