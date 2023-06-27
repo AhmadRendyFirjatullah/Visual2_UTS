@@ -34,6 +34,9 @@ type
     procedure DBGrid1CellClick(Column: TColumn);
     procedure FormShow(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure bersih;
   private
     { Private declarations }
   public
@@ -121,9 +124,66 @@ begin
     SQL.Add('select * from jadwal_table');
     Open;
     ShowMessage('DATA BERHASIL DI UPDATE');
-    
+    bersih;
   end;
 end
+end;
+
+procedure TForm11.Button4Click(Sender: TObject);
+begin
+close;
+end;
+
+procedure TForm11.Button3Click(Sender: TObject);
+begin
+if (Edit1.Text='')or (Edit1.Text='00:00:00')or (Edit2.Text='')or (Edit2.Text='00:00:00') then
+begin
+  ShowMessage('DATA BELUM DIISI DENGAN BENAR');
+end else
+if (ComboBox1.Text='')or (ComboBox1.Text='---PILIH HARI---')then
+begin
+  ShowMessage('HARI BELUM DIISI DENGAN BENAR');
+end else
+if (Edit3.Text='')or (Edit3.Text='-')or (Edit4.Text='')or (Edit4.Text='-')then
+begin
+  ShowMessage('Inputan Ruangan dan Matakuliah masih belum sesuai');
+end else
+if (Edit5.Text='')or (Edit5.Text='-')or (Edit6.Text='')or (Edit6.Text='0')then
+begin
+  ShowMessage('Inputan Kelas atau Total Hadir Masih Belum sesuai');
+end else
+begin
+  //delete
+  if MessageDlg('APAKAH ANDA YAKIN INGIN MENHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)=mryes then
+  begin
+  with Form9.qry1 do
+  begin
+    SQL.Clear;
+    SQL.Add('Delete from jadwal_table where no="'+upd+'"');
+    ExecSQL;
+
+    SQL.Clear;
+    SQL.Add('select * from jadwal_table');
+    Open;
+    ShowMessage('DATA BERHASIL DI HAPUS');
+    bersih;// procedure bersih
+  end;
+  end else
+  begin
+    ShowMessage('DATA BATAL DIHAPUS');
+  end;
+end;
+end;
+
+procedure TForm11.bersih;
+begin
+Edit1.Text :='';
+Edit2.Text :='';
+ComboBox1.Text :='---PILIH HARI---';
+Edit3.Text :='';
+Edit4.Text :='';
+Edit5.Text :='';
+Edit6.Text :='';
 end;
 
 end.

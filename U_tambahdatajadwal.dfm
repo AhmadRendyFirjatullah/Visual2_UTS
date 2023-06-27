@@ -1,8 +1,8 @@
 object Form11: TForm11
-  Left = 134
-  Top = 78
-  Width = 1202
-  Height = 626
+  Left = 232
+  Top = 48
+  Width = 1069
+  Height = 673
   Caption = 'Tambah Data'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,7 +17,7 @@ object Form11: TForm11
   object GroupBox1: TGroupBox
     Left = 0
     Top = 0
-    Width = 1185
+    Width = 1049
     Height = 305
     Caption = 'TAMBAH DATA JADWAL'
     Font.Charset = ANSI_CHARSET
@@ -196,6 +196,7 @@ object Form11: TForm11
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 10
+      OnClick = Button3Click
     end
     object Button4: TButton
       Left = 912
@@ -210,13 +211,14 @@ object Form11: TForm11
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 11
+      OnClick = Button4Click
     end
   end
   object DBGrid1: TDBGrid
     Left = 0
     Top = 304
-    Width = 1185
-    Height = 273
+    Width = 1049
+    Height = 321
     DataSource = Form9.ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -225,5 +227,58 @@ object Form11: TForm11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = DBGrid1CellClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'No'
+        Width = 30
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'jam_mulai'
+        Width = 130
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'jam_akhir'
+        Width = 130
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'hari'
+        Width = 120
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tanggal'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ruang'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'matkul'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'kelas'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'kehadiran_total'
+        Visible = True
+      end>
   end
 end
