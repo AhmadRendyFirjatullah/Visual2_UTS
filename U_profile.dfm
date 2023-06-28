@@ -1,10 +1,10 @@
 object Form10: TForm10
-  Left = 274
-  Top = 177
-  Width = 928
-  Height = 480
+  Left = 428
+  Top = 289
+  Width = 665
+  Height = 242
   Caption = 'Profile'
-  Color = clSkyBlue
+  Color = clMoneyGreen
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
@@ -14,18 +14,19 @@ object Form10: TForm10
   PixelsPerInch = 96
   TextHeight = 19
   object Label1: TLabel
-    Left = 168
-    Top = 144
-    Width = 609
-    Height = 108
+    Left = 0
+    Top = 32
+    Width = 623
+    Height = 132
     Caption = 
-      'NAMA  : AHMAD RENDY FIRJATULLAH'#13#10'NPM     : 2110010084'#13#10'KELAS : 4' +
-      'B Non Reguler Banjarbaru'
+      'NAMA                 : AHMAD RENDY FIRJATULLAH'#13#10'NPM             ' +
+      '       : 2110010084'#13#10'KELAS                : 4B Non Reguler Banja' +
+      'rbaru'#13#10'MATA KULIAH  : Visual 2 '
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -32
+    Font.Height = -29
     Font.Name = 'Times New Roman'
-    Font.Style = [fsBold]
+    Font.Style = []
     ParentFont = False
   end
 end

@@ -4,7 +4,7 @@ object form1: Tform1
   Width = 928
   Height = 480
   Caption = 'Main Menu UTS Visual2'
-  Color = clActiveCaption
+  Color = clBtnShadow
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
@@ -41,7 +41,7 @@ object form1: Tform1
     ParentFont = False
   end
   object MainMenu1: TMainMenu
-    Left = 16
+    Left = 512
     Top = 8
     object Latihan1: TMenuItem
       Caption = 'Latihan'
@@ -89,7 +89,7 @@ object form1: Tform1
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 56
+    Left = 360
     Top = 8
   end
 end
